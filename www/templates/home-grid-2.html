@@ -19,18 +19,6 @@
             {{index.description}}
         </div>
 
-        <div ng-repeat="row in items | partition:2" class="row">
-
-            <div class="card col home text-center" ng-repeat='item in row'>
-                <a class="item item-text-wrap" href="{{item.url}}">
-                    <h1><i class="icon {{item.icon}}"></i></h1>
-                    <h2>{{item.title}}</h2>
-                    <span class="item-note ">{{item.note}}</span>
-                </a>
-            </div>
-
-        </div>
-        
         <ion-slide-box ng-if="products.length > 0">
           <ion-slide ng-repeat="product in products">
             <div class="card-content">
@@ -42,23 +30,48 @@
           </ion-slide>
         </ion-slide-box>
 
-        <div class="list" ng-controller="SocialCtrl">
+        <div ng-repeat="row in items | partition:2" class="row">
 
+            <div class="card col home text-center" ng-repeat='item in row'>
+                <a class="item item-text-wrap" href="{{item.url}}">
+                    <h1><i class="icon {{item.icon}}"></i></h1>
+                    <h2>{{item.title}}</h2>
+                    <span class="item-note ">{{item.note}}</span>
+                </a>
+            </div>
+
+        </div>
+        <div ng-controller="CategoriesCtrl">
+            <div ng-repeat="row in categories | partition:1">
+                <div class="categorias" ng-repeat="category in row">
+
+                  <div ui-sref="app.category({category_slug: category.slug, category_name: category.name})" class="categoria">
+                    <img ng-if="category.image" src="{{category.image}}" />
+                    <img ng-if="!category.image" src="images/woo-ninja.png" />
+                    <p ng-if="category.description" class='item-text-wrap' ng-bind-html="category.description"></p>
+                  </div>
+
+                 <div ui-sref="app.category({category_slug: c.slug, category_name: c.name})" class="item" ng-repeat="c in category.children">
+                    <img class="full-image" ng-if="c.image" ng-src="{{c.image}}" />
+                    <p ng-if="c.description" class='item-text-wrap' ng-bind-html="c.description"></p>
+                  </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- <div class="list" ng-controller="SocialCtrl">
             <div class="item item-divider">
                 Social Profiles
             </div>
-
             <a class="item item-icon-left" ng-click="openLink(index.URL)">
                 <i class="icon ion-bag"></i>
                 Our Store
             </a>
-
             <a ng-repeat="social in socialItems" class="item item-icon-left" ng-click="openLink(social.url)">
                 <i class="icon {{social.icon}}"></i>
                 {{social.title}}
             </a>
-
-        </div>
-
+        </div> -->
+        <footer><p>Naturapp &copy; 2019 V.0.80 DEMO</p></footer>
     </ion-content>
 </ion-view>

@@ -45,7 +45,7 @@ angular.module('woocommerce-api.controllers', [])
 // Products Controller
 .controller('ProductsCtrl', function($rootScope, $scope, ProductsData) {
 
-    $scope.title = 'Products';
+    $scope.title = 'Productos';
     $scope.products = [];
     $scope.productPage = 0;
     ProductsData.clear();

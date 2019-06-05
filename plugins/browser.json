@@ -15,11 +15,6 @@
         },
         "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "com.hybridapps.woocommerce"
-        }
-    },
-    "dependent_plugins": {
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.hybridapps.woocommerce"
         },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.hybridapps.woocommerce"
@@ -28,6 +23,11 @@
             "PACKAGE_NAME": "com.hybridapps.woocommerce"
         },
         "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.hybridapps.woocommerce"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-device": {
             "PACKAGE_NAME": "com.hybridapps.woocommerce"
         },
         "cordova-plugin-x-socialsharing": {

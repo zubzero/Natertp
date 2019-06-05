@@ -8,9 +8,9 @@ angular.module('woocommerce-api.data', [])
     data.items = [{
         title: 'Ver productos',
         icon: 'ion-tshirt',
-        note: 'Our Products',
+        note: 'Ver tienda',
         url: '#/app/products'
-    }, {
+    },/* {
         title: 'Categorías',
         icon: 'ion-bag',
         note: 'Our Product Categories',
@@ -20,10 +20,10 @@ angular.module('woocommerce-api.data', [])
         icon: 'ion-bag',
         note: 'Our Product Categories',
         url: '#/app/categories'
-    }, {
+    },*/ {
         title: 'Crear cuenta',
         icon: 'ion-person-add',
-        note: 'Register',
+        note: 'Registrarse',
         url: '#/app/newCustomer'
     }];
 
@@ -34,30 +34,32 @@ angular.module('woocommerce-api.data', [])
     var data = {};
 
     data.items = [{
-        title: 'Home',
+        title: 'Inicio',
         icon: 'ion-home',
         url: '#/app/home'
     }, {
-        title: 'Products',
+        title: 'Productos',
         icon: 'ion-tshirt',
         url: '#/app/products'
     }, {
-        title: 'Categories (Cards)',
+        title: 'Categorías',
         icon: 'ion-bag',
         url: '#/app/categories-cards'
-    }, {
-        title: 'Categories',
-        icon: 'ion-bag',
-        url: '#/app/categories'
-    }, {
-        title: 'New Customer',
-        icon: 'ion-person-add',
-        url: '#/app/newCustomer'
-    }, {
-        title: 'About',
-        icon: 'ion-grid',
-        url: '#/app/about'
-    }];
+    } 
+    // {
+    //     title: 'Categories',
+    //     icon: 'ion-bag',
+    //     url: '#/app/categories'
+    // }, {
+    //     title: 'New Customer',
+    //     icon: 'ion-person-add',
+    //     url: '#/app/newCustomer'
+    // }, {
+    //     title: 'About',
+    //     icon: 'ion-grid',
+    //     url: '#/app/about'
+    // }
+    ];
 
     return data;
 })
@@ -385,10 +387,10 @@ angular.module('woocommerce-api.data', [])
             basket.push(product);
 
         var addedToCart = $ionicPopup.show({
-            title: 'Added to Cart',
-            subTitle: 'Product successfully added to your Cart.',
+            title: 'Añadido a tu carrito',
+            subTitle: 'El producto se agrego correctamente',
             buttons: [
-                { text: 'OK', type: 'button-positive' }
+                { text: 'Entendido', type: 'button-positive' }
             ]
         });
 
