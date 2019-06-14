@@ -1,0 +1,7 @@
+{
+  "name": "Naturapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic1"
+}

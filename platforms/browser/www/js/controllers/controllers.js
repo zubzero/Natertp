@@ -396,6 +396,9 @@ angular.module('woocommerce-api.controllers', [])
             UserData.check($scope.email.addr).then(function(user) {
                 $scope.emailVerified = true;
                 $scope.user = user;
+                if ($scope.user) {
+                localStorage.setItem("NombreU", $scope.user.customer.first_name);   
+                }
                 console.log(user);
             }, function() {
                 $scope.emailVerified = false;

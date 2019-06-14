@@ -31,4 +31,4 @@ angular.module("woocommerce-api").constant("CONFIG", {
     // Frontpage Slideshow Category
     slideshow_category: 'alimentos'
 
-});
+})

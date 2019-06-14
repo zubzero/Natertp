@@ -45,7 +45,18 @@ angular.module('woocommerce-api.data', [])
         title: 'Categorías',
         icon: 'ion-bag',
         url: '#/app/categories-cards'
-    } 
+    },
+    {
+        title: 'Mi cuenta',
+        icon: 'ion-bag',
+        url: '#/app/my-account'
+    },
+    {
+        title: 'Mis Ordenes',
+        icon: 'ion-bag',
+        url: '#/app/edit/:customer_id'
+    }
+
     // {
     //     title: 'Categories',
     //     icon: 'ion-bag',
@@ -372,8 +383,8 @@ angular.module('woocommerce-api.data', [])
 */
     var payment_methods = {
         bacs: 'Direct Bank Transfer',
-        cheque: 'Cheque Payment',
-        cod: 'Cash on Delivery',
+        // cheque: 'Cheque Payment',
+        // cod: 'Cash on Delivery',
         paypal: 'PayPal'
     }
 
@@ -678,8 +689,8 @@ angular.module('woocommerce-api.data', [])
             data: {
                 "intent": "order",
                 "redirect_urls": {
-                    "return_url": "http://example.url/return.html",
-                    "cancel_url": "http://example.url/cancel.html"
+                    "return_url": "https://naturapp.store/return.html",
+                    "cancel_url": "http://naturapp.store/cancel.html"
                 },
                 "payer": {
                     "payment_method": "paypal"

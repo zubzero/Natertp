@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1079867401276",
+    "firebase_url": "https://naturapp-d9a41.firebaseio.com",
+    "project_id": "naturapp-d9a41",
+    "storage_bucket": "naturapp-d9a41.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1079867401276:android:089c8561ed16e3e9",
+        "android_client_info": {
+          "package_name": "com.naturapp.store"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1079867401276-jd40i91m4ep53sia5572ra0tcdp51qs8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsoMVonVXS9-r2XmoqxSZybDyp_4QQqzQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1079867401276-jd40i91m4ep53sia5572ra0tcdp51qs8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

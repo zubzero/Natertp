@@ -203,3 +203,13 @@ footer{
   margin: 0 auto;
 }
 .center{text-align: center;}
+input, .item-input input{
+  background: #fff8c3;
+}
+.card .item-divider, .scroll .item-divider{
+  background-color: #fff;
+}
+.item-divider {
+    color: #fff;
+    background-color: #f57c05;
+}

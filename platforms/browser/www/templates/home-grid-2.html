@@ -6,7 +6,6 @@
         <a class="button button-clear" href="#/app/basket"><i class="icon ion-ios-cart"><span class="badge badge-dark">{{cartItems}}</span></i></a>
     </ion-nav-buttons>
     <ion-content class="has-header">
-
         <div class="screen">
             <div class="item-text-wrap text-center">
                 <div class="text-center">
@@ -18,7 +17,39 @@
         <div class="item item-divider">
             {{index.description}}
         </div>
+        <!-- index.html -->
 
+<div class="content">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Auth0 - JavaScript</a>
+
+        <button id="btn-home-view" class="btn btn-primary btn-margin">
+            Home
+        </button>
+
+        <button id="btn-login" class="btn btn-primary btn-margin">
+            Log In
+        </button>
+
+        <button id="btn-logout" class="btn btn-primary btn-margin">
+            Log Out
+        </button>
+
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- home view -->
+    <div id="home-view">
+      <h4></h4>
+    </div>
+    
+  </main>
+
+</div>
         <ion-slide-box ng-if="products.length > 0">
           <ion-slide ng-repeat="product in products">
             <div class="card-content">

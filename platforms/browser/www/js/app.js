@@ -32,14 +32,14 @@ angular.module('woocommerce-api', ['ionic', 'woocommerce-api.controllers',
         // PayPal Configuration
         var clientIDs = {
             "PayPalEnvironmentProduction": PAYMENT_CONFIG.paypal.production_client_id, // not needed while testing
-            "PayPalEnvironmentSandbox": PAYMENT_CONFIG.paypal.sandbox_client_id
+            // "PayPalEnvironmentSandbox": PAYMENT_CONFIG.paypal.sandbox_client_id
         };
 
         window.PayPalMobile.init(
             clientIDs,
             function() {
                 window.PayPalMobile.prepareToRender(
-                    "PayPalEnvironmentSandbox", // or "PayPalEnvironmentProduction" for production mode
+                    "PayPalEnvironmentProduction", // or "PayPalEnvironmentSandbox " for production mode
                     new PayPalConfiguration(PAYMENT_CONFIG.paypal.config),
                     function() { console.log("OK, ready to accept payments!"); }
                 );
@@ -182,6 +182,25 @@ angular.module('woocommerce-api', ['ionic', 'woocommerce-api.controllers',
         }
     })
 
+    .state('app.edit', {
+        url: "/edit/:customer_id",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/editar_usuario.html",
+                controller: 'EditCtrl'
+            }
+        }
+    })
+
+    .state('app.login', {
+        url: "/login/",
+        views: {
+            'menuContent': {
+                templateUrl: "templates/login.html",
+                controller: 'LoginCtrl'
+            }
+        }
+    })
 
     .state('app.about', {
         url: "/about",
